@@ -25,68 +25,29 @@ body {
 
 #greeting {
     margin: 0;
+    opacity: 0;
+    transition: opacity 2s;
 }
 
 #names {
     margin: 0;
     font-size: 2em;
     margin-top: 10px; /* Adds a bit of space before Tania & Niels */
+    opacity: 0;
+    transition: opacity 2s;
 }
 
 .tree {
     font-size: 5em;
     opacity: 0;
-    animation: showTree 2s forwards;
+    transition: opacity 2s;
 }
 
-@keyframes showTree {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.snowflakes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.snowflake {
-    position: absolute;
-    top: -10px;
-    width: 1em;
-    height: 1em;
-    background: none;
-    opacity: 0.8;
-    font-size: 1.5em;
-    color: white;
-    user-select: none;
-    animation: fall 10s linear infinite;
-}
-
-@keyframes fall {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
-}
-
-
-#names {
-    margin: 0;
-    font-size: 2em;
-    margin-top: 10px; /* Adds a bit of space before Tania & Niels */
-}
-
-.tree {
-    font-size: 5em;
-    opacity: 0;
-    animation: showTree 2s forwards;
-}
-
-@keyframes showTree {
-    from { opacity: 0; }
-    to { opacity: 1; }
+#play-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .snowflakes {

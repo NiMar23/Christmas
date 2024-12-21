@@ -5,7 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const namesElement = document.getElementById('names');
     const treeElement = document.getElementById('christmas-tree');
     const starElement = document.getElementById('falling-star');
+    const audioElement = document.getElementById('jingle-bells');
     let index = 0;
+
+    // Function to play audio
+    function playAudio() {
+        audioElement.play();
+    }
+    window.playAudio = playAudio;  // Make the function available globally
 
     // Function to create a snowflake
     function createSnowflake() {
