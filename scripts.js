@@ -6,13 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const treeElement = document.getElementById('christmas-tree');
     const starElement = document.getElementById('falling-star');
     const audioElement = document.getElementById('jingle-bells');
+    const playButton = document.getElementById('play-button');
     let index = 0;
 
-    // Function to play audio
-    function playAudio() {
-        audioElement.play();
+    // Function to toggle audio
+    function toggleAudio() {
+        if (audioElement.paused) {
+            audioElement.play();
+            playButton.textContent = "Stop Music";
+        } else {
+            audioElement.pause();
+            playButton.textContent = "Play Music";
+        }
     }
-    window.playAudio = playAudio;  // Make the function available globally
+    window.toggleAudio = toggleAudio;  // Make the function available globally
 
     // Function to create a snowflake
     function createSnowflake() {
@@ -53,6 +60,3 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeLetter, 500); // Start text animation after 0.5s
     });
 });
-
-
-
